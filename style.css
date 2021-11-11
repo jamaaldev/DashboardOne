@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 950px) {
+  .container .left {
+    max-width: 70px;
+    width: 100%;
+  }
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.left {
+  background-color: darkgoldenrod;
+  max-width: 200px;
+  width: 100%;
+  transition: 200ms ease-in;
+}
+.left #close {
+  display: none;
+}
+#check {
+  display: none;
+}
+#check:checked ~ .container .left {
+  max-width: 70px;
+  width: 100%;
+}
+#check:checked ~ .container .left #close {
+  display: block;
+}
+#check:checked ~ .container .left #open {
+  display: none;
+}
+
+.right {
+  background-color: darkgreen;
+  width: 100%;
+}
